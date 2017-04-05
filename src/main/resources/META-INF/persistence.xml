@@ -1,0 +1,16 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<persistence version="2.1" xmlns="http://xmlns.jcp.org/xml/ns/persistence" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:schemaLocation="http://xmlns.jcp.org/xml/ns/persistence http://xmlns.jcp.org/xml/ns/persistence/persistence_2_1.xsd">
+  <persistence-unit name="servicios.rest.co.ws_ServiciosRest_war_1.0-SNAPSHOTPU" transaction-type="RESOURCE_LOCAL">
+    <provider>org.eclipse.persistence.jpa.PersistenceProvider</provider>
+    <class>servicios.rest.co.ws.serviciosrest.model.Partes</class>
+    <class>servicios.rest.co.ws.serviciosrest.model.Carros</class>
+    <class>servicios.rest.co.ws.serviciosrest.model.CarrosPartes</class>
+    <exclude-unlisted-classes>false</exclude-unlisted-classes>
+    <properties>
+      <property name="javax.persistence.jdbc.url" value="jdbc:derby://localhost:1527/tallercarros"/>
+      <property name="javax.persistence.jdbc.user" value="tallercarros"/>
+      <property name="javax.persistence.jdbc.driver" value="org.apache.derby.jdbc.ClientDriver"/>
+      <property name="javax.persistence.jdbc.password" value="tallercarros"/>
+    </properties>
+  </persistence-unit>
+</persistence>
