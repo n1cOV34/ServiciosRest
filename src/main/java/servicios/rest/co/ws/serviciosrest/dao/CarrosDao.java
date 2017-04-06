@@ -16,7 +16,7 @@ public class CarrosDao {
         try {
             session = sessionFactory.openSession();
             session.beginTransaction();
-            carros = (Carros) session.createQuery("from carros c where c.placa = :PLACA").setParameter("PLACA", placa).uniqueResult();
+            carros = (Carros) session.createQuery("from Carros c where c.placa = :PLACA").setParameter("PLACA", placa).uniqueResult();
             session.getTransaction().commit();
         } catch (Exception e) {
             if (session != null) {
@@ -35,7 +35,7 @@ public class CarrosDao {
         try {
             session = sessionFactory.openSession();
             session.beginTransaction();
-            carros = session.createQuery("from carros c").list();
+            carros = session.createQuery("from Carros c").list();
             session.getTransaction().commit();
         } catch (Exception e) {
             if (session != null) {

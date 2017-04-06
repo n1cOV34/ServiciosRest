@@ -17,7 +17,7 @@ public class CarrosPartesDao {
         try {
             session = sessionFactory.openSession();
             session.beginTransaction();
-            carrospartes = (CarrosPartes) session.createQuery("from carrospartes cp where cp.carrospartes = :CARROSPARTES").setParameter("CARROSPARTES", carrospartesPK).uniqueResult();
+            carrospartes = (CarrosPartes) session.createQuery("from CarrosPartes cp where cp.carrospartes = :CARROSPARTES").setParameter("CARROSPARTES", carrospartesPK).uniqueResult();
             session.getTransaction().commit();
         } catch (Exception e) {
             if (session != null) {
@@ -36,7 +36,7 @@ public class CarrosPartesDao {
         try {
             session = sessionFactory.openSession();
             session.beginTransaction();
-            carrospartes = session.createQuery("from carrospartes cp").list();
+            carrospartes = session.createQuery("from CarrosPartes cp").list();
             session.getTransaction().commit();
         } catch (Exception e) {
             if (session != null) {

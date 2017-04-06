@@ -17,7 +17,7 @@ public class PartesDao {
         try {
             session = sessionFactory.openSession();
             session.beginTransaction();
-            partes = (Partes) session.createQuery("from partes p where p.codigo = :CODIGO").setParameter("CODIGO", codigo).uniqueResult();
+            partes = (Partes) session.createQuery("from Partes p where p.codigo = :CODIGO").setParameter("CODIGO", codigo).uniqueResult();
             session.getTransaction().commit();
         } catch (Exception e) {
             if (session != null) {
@@ -36,7 +36,7 @@ public class PartesDao {
         try {
             session = sessionFactory.openSession();
             session.beginTransaction();
-            partes = session.createQuery("from partes p").list();
+            partes = session.createQuery("from Partes p").list();
             session.getTransaction().commit();
         } catch (Exception e) {
             if (session != null) {
